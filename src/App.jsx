@@ -8,8 +8,9 @@ import Register from './components/login and Register/register';
 import FAQ from './pages/faq';
 import Collection from './pages/Collection';
 import Event from './pages/Event';
-import Test from './pages/test';
+
 import { getAuthStatus } from '../src/Utils/authUtils';
+
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(getAuthStatus());
@@ -19,13 +20,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
         <Route path="/about" element={<About isLoggedIn={isLoggedIn} />} />
-        <Route path="/test" element={<Test isLoggedIn={isLoggedIn} />} />
         <Route path="/login" element={<Login onLogin={() => setIsLoggedIn(true)} />} />
         <Route path="/contact" element={<Contact isLoggedIn={isLoggedIn} />} />
         <Route path="/register" element={<Register />} />
         <Route path="/faq" element={<FAQ isLoggedIn={isLoggedIn} />} />
         <Route path="/collection" element={<Collection isLoggedIn={isLoggedIn} />} />
         <Route path="/event" element={<Event isLoggedIn={isLoggedIn} />} />
+
+
       </Routes>
     </Router>
   );

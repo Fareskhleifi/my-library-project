@@ -3,6 +3,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/flowbite/**/*.js", // Add this line to ensure Tailwind processes Flowbite's files
   ],
   theme: {
     extend: {
@@ -14,7 +15,7 @@ export default {
         'fade-up': 'fade-up 0.5s ease-in-out',
         'fade-right': 'fade-right 1s ease-in-out',
         'fade-left': 'fade-left 1s ease-in-out',
-        'bounce': 'bounce 1s infinite' 
+        'bounce': 'bounce 1s infinite',
       },
       keyframes: {
         'fade-up': {
@@ -31,12 +32,12 @@ export default {
         },
         'bounce': {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' }
+          '50%': { transform: 'translateY(-10px)' },
         },
       },
     },
   },
-  plugins: [],
-  
+  plugins: [
+    
+  ],
 }
-
