@@ -17,7 +17,7 @@ export default function Register() {
     password : "",
     telephone : "",
     adresse : "",
-    role : "USER"
+    role : ""
   });
 
   const [confirmPassword, setConfirmPassword] = useState("");

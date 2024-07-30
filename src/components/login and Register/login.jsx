@@ -27,15 +27,24 @@ function Login({ onLogin }) {
         email: email,
         password: password,
       });
+  
       const token = response.data.token;
       localStorage.setItem('token', token);
       setEmail('');
       setPassword('');
-
-      login();
-      onLogin();
-      console.log('User logged in');
-      navigate('/');
+      const role = response.data.role;
+  
+      if (role === 'ADMIN') {
+        console.log('Admin logged in');
+        window.location.href = `http://localhost:5174?token=${encodeURIComponent(token)}&nom=${encodeURIComponent(response.data.nom)}`;
+      } else if (role === 'USER') {
+        login();
+        onLogin();
+        console.log('User logged in');
+        navigate('/');
+      } else {
+        setError('Email or password incorrect!');
+      }
     } catch (error) {
       setError('Invalid credentials. Please try again.');
     }
