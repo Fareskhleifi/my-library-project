@@ -120,7 +120,9 @@ export default function Home({isLoggedIn}) {
       )}
         </nav>
       </header>
-      <div className="block justify-center mt-28 items-center h-screen">
+       <div className="block justify-center mt-28 items-center h-screen">
+        <section id="s1" className="block w-full" style={{ backgroundColor: `#F6DDCC`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh', margin: '0 auto' }}>
+        <div className="block justify-center mt-28 items-center h-screen">
         <section id="s1" className="block w-full" style={{ backgroundColor: `#F6DDCC`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh', margin: '0 auto' }}>
           <div className="relative w-full min-h-screen">
             <div
@@ -149,6 +151,8 @@ export default function Home({isLoggedIn}) {
               </div>
             </div>
           </div>
+        </section>
+      </div>
         </section>
       </div>
       <div className="flex relative h-32 -mt-4 justify-center items-center" style={{ backgroundColor: `#F6DDCC` }}>

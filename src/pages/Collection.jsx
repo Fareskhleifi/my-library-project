@@ -6,6 +6,7 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import BookCard from '../components/BookCard/BookCard';
 import { request } from '../axios_helper';
 import NavbarLogin from "../components/navbar/navbarLogin";
+import Footer from '../components/footer/Footer';
 
 // eslint-disable-next-line react/prop-types
 export default function Collection({isLoggedIn}) {
@@ -88,13 +89,15 @@ export default function Collection({isLoggedIn}) {
         </nav>
       </header>
          <main>
-            <div className=" animate-fade-up animate-once mt-28">
+            <div className=" animate-fade-up animate-once mt-16">
                   <BookCard livre={livres} />
             </div>
         </main>
-        {/* <footer id="contact" className='mt-24'>
-          <Footer />
-        </footer> */}
+        <div className='border-t w-5/6 m-auto border-black my-8'></div>
+        
+        <footer id="contact" className='mt-24'>
+          <Footer/>
+        </footer>
     </div>
   );
 }

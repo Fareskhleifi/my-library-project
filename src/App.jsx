@@ -8,12 +8,14 @@ import Register from './components/login and Register/register';
 import FAQ from './pages/faq';
 import Collection from './pages/Collection';
 import Event from './pages/Event';
-
 import { getAuthStatus } from '../src/Utils/authUtils';
-
+import DetailsCard from './components/BookCard/DetailsCard';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(getAuthStatus());
+ 
+
+ 
 
   return (
     <Router>
@@ -26,8 +28,7 @@ function App() {
         <Route path="/faq" element={<FAQ isLoggedIn={isLoggedIn} />} />
         <Route path="/collection" element={<Collection isLoggedIn={isLoggedIn} />} />
         <Route path="/event" element={<Event isLoggedIn={isLoggedIn} />} />
-
-
+        <Route path="/DetailsCard/:idLivre" element={<DetailsCard isLoggedIn={isLoggedIn} />} />
       </Routes>
     </Router>
   );
