@@ -101,6 +101,10 @@ export default function Home({isLoggedIn}) {
     });
   };
 
+  const handleCollection = ()=>{
+    window.location.href = '/collection'
+  }
+
   return (
     <div>
       {isVisible && (
@@ -140,6 +144,7 @@ export default function Home({isLoggedIn}) {
                   Grab-and-go book checkout services now available
                 </p>
                 <button
+                  onClick={handleCollection}
                   className="relative mt-7 flex items-center justify-center font-sans font-semibold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-36 h-12 rounded-lg text-xs bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
                   type="button"
                 >

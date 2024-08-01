@@ -67,7 +67,7 @@ const NavbarHome = ({ scrollToSection }) => {
               <img
                 alt="Your Company"
                 src="../src/assets/logo.png"
-                className="h-40 w-auto"
+                className="h-40 w-auto max-lg:hidden"
               />
             </div>
           </div>

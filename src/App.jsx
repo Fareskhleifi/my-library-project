@@ -10,6 +10,8 @@ import Collection from './pages/Collection';
 import Event from './pages/Event';
 import { getAuthStatus } from '../src/Utils/authUtils';
 import DetailsCard from './components/BookCard/DetailsCard';
+import Profile from './pages/Profile';
+import Historical from './pages/historical';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(getAuthStatus());
@@ -29,6 +31,8 @@ function App() {
         <Route path="/collection" element={<Collection isLoggedIn={isLoggedIn} />} />
         <Route path="/event" element={<Event isLoggedIn={isLoggedIn} />} />
         <Route path="/DetailsCard/:idLivre" element={<DetailsCard isLoggedIn={isLoggedIn} />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/historical" element={<Historical />} />
       </Routes>
     </Router>
   );

@@ -87,7 +87,7 @@ function Login({ onLogin }) {
             <div className="relative flex items-center">
               <input
                 name="email"
-                type="text"
+                type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
